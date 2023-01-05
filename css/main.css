@@ -131,12 +131,16 @@ header .sub-menu {
 }
 header .sub-menu ul.menu {
   font-family: Arial, sans-serif;
+  /* 수평 정렬 */
   display: flex;
 }
 header .sub-menu ul.menu li {
+  /* header .sub-menu ul.menu li: :before의 부모 */
   position: relative;
 }
+/* ::befor=> 앞쪽에 무언가를 추가 */
 header .sub-menu ul.menu li::before {
+  /* 내용이 비워짐 before요소를 사용할때는 꼭 써야함. 사용하지 않을시 before는 작동하지 않음 */
   content: "";
   width: 1px;
   height: 12px;
@@ -148,6 +152,7 @@ header .sub-menu ul.menu li::before {
   margin: auto;
 }
 header .sub-menu ul.menu li:first-child::before {
+  /* 첫번째 자식은 화면에 표시 안함 */
   display: none;
 }
 header .sub-menu ul.menu li a {
@@ -168,12 +173,15 @@ header .sub-menu .search input {
   height: inherit;
   padding: 4px 10px;
   border: 1px solid #ccc;
+  /* 박스의 크기를 width: 36px, height: 34px만큼 지정하고 padding과 border가 지정됨 */
   box-sizing: border-box;
   border-radius: 5px;
+  /* 외곽선 없음 */
   outline: none;
   background-color: #fff;
   color: #777;
   font-size: 12px;
+  /* 가로 너비만 전환효과 적용 */
   transition: width .4s;
 }
 header .sub-menu .search input:focus {
@@ -189,7 +197,9 @@ header .sub-menu .search .material-icons {
   margin: auto;
   transition: .4s;
 }
+/* .search.focused=> 일치선택자 */
 header .sub-menu .search.focused .material-icons {
+  /* focus가 되면 아이콘을 안보이게 설정 */
   opacity: 0;
 }
 header .main-menu {

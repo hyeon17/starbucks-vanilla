@@ -5,15 +5,19 @@
  */
 // 검색창 요소(.search) 찾기.
 const searchEl = document.querySelector('.search')
+// .search 하위인 input
 const searchInputEl = searchEl.querySelector('input')
 // 검색창 요소를 클릭하면 실행.
 searchEl.addEventListener('click', function () {
-  searchInputEl.focus()
+  // searchInputEl에 foucus되게 함
+  searchInputEl.focus();
 })
 // 검색창 요소 내부 실제 input 요소에 포커스되면 실행.
 searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused')
-  searchInputEl.setAttribute('placeholder', '통합검색')
+  // focused라는 클래스 추가
+  searchEl.classList.add("focused");
+  // placeholder에 통합검색을 지정
+  searchInputEl.setAttribute("placeholder", "통합검색");
 })
 // 검색창 요소 내부 실제 input 요소에서 포커스가 해제(블러)되면 실행.
 searchInputEl.addEventListener('blur', function () {
