@@ -7,6 +7,7 @@ body {
   color: #333;
 }
 a {
+  /* 밑줄 표시 안함 */
   text-decoration: none;
 }
 img {
@@ -140,6 +141,7 @@ header .sub-menu ul.menu li::before {
   width: 1px;
   height: 12px;
   background-color: #e5e5e5;
+  /* 부모요소 기준으로 배치 */
   position: absolute;
   top: 0;
   bottom: 0;
