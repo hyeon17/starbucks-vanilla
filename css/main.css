@@ -89,20 +89,24 @@ img {
 
 /*BACK TO POSITION*/
 .back-to-position {
+  /* 투명한 상태 */
   opacity: 0;
   transition: 1s;
 }
 
 .back-to-position.to-right {
+  /* x축으로 왼쪽으로 이동 */
   transform: translateX(-150px);
 }
 
 .back-to-position.to-left {
+  /* 오른쪽으로 이동 */
   transform: translateX(150px);
 }
 
 .show .back-to-position {
   opacity: 1;
+  /* 원래 위치로 돌아옴 */
   transform: translateX(0);
 }
 
@@ -501,6 +505,7 @@ header .badges .badge {
   height: 693px;
   background-color: #f6f5ef;
   position: relative;
+  /* 넘침 요소 숨김 */
   overflow: hidden;
   transition: height .4s;
 }
@@ -515,7 +520,11 @@ header .badges .badge {
   height: 553px;
   position: absolute;
   top: 40px;
+  /* 요소를 왼쪽에서 50%거리만큼 배치*/
+  /* 요소--> */
   left: 50%;
+  /* 요소기준 왼쪽으로 절만만큼 다시 배치 */
+  /* <--요소 */
   margin-left: calc((819px * 3 + 20px) / -2);
 }
 
@@ -753,6 +762,7 @@ header .badges .badge {
 }
 
 .reserve-coffee .reserve-logo {
+  /* 뷰포트를 부모로 기준 */
   position: absolute;
   top: 110px;
   left: 0;
@@ -776,6 +786,7 @@ header .badges .badge {
   background-image: url("../images/favorite_bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  /* 뷰포트를 기준으로 고정됨 */
   background-attachment: fixed;
   background-size: cover;
 }
@@ -805,6 +816,7 @@ header .badges .badge {
 .reserve-store {
   background-image: url("../images/reserve_store_bg.jpg");
   background-repeat: no-repeat;
+  /* 뷰포트를 부모로 기준으로 센터로 됨*/
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

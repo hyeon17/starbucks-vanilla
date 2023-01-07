@@ -70,6 +70,7 @@ window.addEventListener(
 toTopEl.addEventListener("click", function () {
   // 페이지 위치를 최상단으로 부드럽게(0.7초 동안) 이동.
   gsap.to(window, 0.7, {
+    // 페이지 최상단
     scrollTo: 0,
   });
 });
@@ -96,6 +97,7 @@ fadeEls.forEach(function (fadeEl, index) {
 /**
  * 슬라이드 요소 관리
  */
+// Swiper 생성자(선택자, 옵션)
 new Swiper(".notice-line .swiper-container", {
   direction: "vertical", // 수직 슬라이드
   autoplay: true, // 자동 재생 여부
@@ -149,10 +151,10 @@ let isHidePromotion = false;
 promotionToggleBtn.addEventListener("click", function () {
   // 슬라이드 영역 숨김 여부를 반댓값으로 할당!
   isHidePromotion = !isHidePromotion;
-  // 요소를 숨겨야 하면,
+  // 요소를 숨겨야 하면,(true)
   if (isHidePromotion) {
     promotionEl.classList.add("hide");
-    // 요소가 보여야 하면,
+    // 요소가 보여야 하면,(false)
   } else {
     promotionEl.classList.remove("hide");
   }
